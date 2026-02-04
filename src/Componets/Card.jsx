@@ -6,7 +6,7 @@ function Card() {
       image:
         "https://i.pinimg.com/736x/89/be/04/89be042f996a9b0dd7f92eefbc1e2343.jpg",
       name: "Om Jaiswal",
-      description: "Om Jaiswal is good boy ",
+      description: "Om JAISWAL is good boy ",
     },
     {
       image:
