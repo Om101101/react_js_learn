@@ -1,7 +1,8 @@
 import React from 'react';
+import Navbar from "./Componets/Navbar";
 function App(){
   return(
-    <h1>Om Jaiswal</h1>
+    <Navbar/>
   )
 }
 export default App;
