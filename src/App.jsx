@@ -1,14 +1,12 @@
-import React from "react";
-import Navbar from "./Componets/Navbar";
-import Hero from "./Componets/Hero";
-import Second from "./Componets/Second";
+import Card from "./Componets/Card";
+import "./index.css";
+
 function App() {
   return (
     <div>
-      <Navbar />
-      <Hero />
-      <Second />
+      <Card />
     </div>
   );
 }
+
 export default App;
