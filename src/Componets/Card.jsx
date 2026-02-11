@@ -70,11 +70,7 @@
 
 // export default Card;
 
-
-
-
-
-//  Music Crd using Handling Events 
+//  Music Crd using Handling Events
 /* import React from "react";
 
 function Card() {
@@ -181,14 +177,31 @@ function Card() {
 }
 
 export default Card */
-
+/* 
 import React, { useState } from 'react'
 
 function Card() {
-  useState(12)
+  const [val ,setVal] = useState(12)
   return (
-    <div>Card</div>
+    <div className='p-4'>
+     <h1>{val}</h1>
+     <button onClick={()=> setVal((prev)=> prev+1)} className='px-3 py-1 bg-green-400 text-white rounded-md'>Click me </button>
+      </div>
   )
 }
 
-export default Card
+export default Card */
+import React, { useState } from "react";
+
+function Card() {
+  const [val, setVal] = useState({ name: "Om Jaiswal ", isBanned: false });
+  return (
+    <div className="p-4">
+      <h1> Name: {val.name}</h1>
+      <h2>Banned:{val.isBanned.toString()}</h2>
+      <button onClick={()=>setVal({...val, isBanned:!val.isBanned}) } className='px-3 py-1 bg-green-400 text-white rounded-md'>Click me </button>
+    </div>
+  );
+}
+
+export default Card;
