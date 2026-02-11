@@ -191,7 +191,8 @@ function Card() {
 }
 
 export default Card */
-import React, { useState } from "react";
+
+/* import React, { useState } from "react";
 
 function Card() {
   const [val, setVal] = useState({ name: "Om Jaiswal ", isBanned: false });
@@ -199,9 +200,64 @@ function Card() {
     <div className="p-4">
       <h1> Name: {val.name}</h1>
       <h2>Banned:{val.isBanned.toString()}</h2>
-      <button onClick={()=>setVal({...val, isBanned:!val.isBanned}) } className='px-3 py-1 bg-green-400 text-white rounded-md'>Click me </button>
+      <button onClick={()=>setVal({...val, isBanned:!val.isBanned}) } className={`px-3 py-1 ${val.isBanned ? " bg-green-400" : " bg-red-400"} text-white rounded-full`}>Click me </button>
     </div>
   );
 }
 
-export default Card;
+export default Card; */
+/* import React, { useState } from 'react'
+
+function Card() {
+const [val,setVal]= useState({name: "Harsh", age:24});
+  return (
+    <div className='px-4 py-5'>
+     
+      <button  className='px-4 py-2 bg-green-400 text-white rounded-full' onClick={()=>{
+         setVal({...val, gender:"male"});
+
+
+      }}>Click me</button>
+    </div>
+  )
+}
+
+export default Card */
+/* This code snippet is a React component named `Card` that demonstrates the use of the `useState` hook
+in React. */
+/* import React, { useState } from "react";
+
+function Card() {
+  const [val, setVal] = useState([
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  ]);
+  return (
+    <div className="py-5 px-8">
+      {val.map((item) => (
+        <h1>{item} </h1>
+      ))}
+      <button
+        onClick={() =>
+          setVal(() => {
+            return val.filter((item, index) => index != val.length - 1);
+          })
+        }
+        className="px-4 py-2 bg-green-300  text-white rounded-full"
+      >
+       
+      </button>
+    </div>
+  );
+}
+
+export default Card; */
+/* import React from 'react'
+
+function Card() {
+  return (
+    <div>Card</div>
+  )
+}
+
+export default Card */
+
