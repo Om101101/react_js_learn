@@ -251,13 +251,43 @@ function Card() {
 }
 
 export default Card; */
-/* import React from 'react'
+import React, { useState } from "react";
+import { FaArrowRight } from "react-icons/fa6";
 
 function Card() {
+  const [val, setVal] = useState(false); // ✅ = missing tha
+
   return (
-    <div>Card</div>
-  )
+    <div className="w-full h-screen bg-blue-300 flex justify-center items-center">
+      <div className="w-80 h-60 relative rounded-md flex overflow-hidden">
+        {/* First Image */}
+        <img
+          className={`w-full shrink-0 h-full transition-transform duration-500 object-cover ${
+            val ? "-translate-x-full" : "translate-x-0"
+          }`}
+          src="https://i.pinimg.com/1200x/9b/5a/52/9b5a52e2b31513eb77508dadd1d11765.jpg"
+          alt=""
+        />
+
+        {/* Second Image */}
+        <img
+          className={`w-full shrink-0 h-full transition-transform duration-500 object-cover ${
+            val ? "-translate-x-full" : "translate-x-0"
+          }`}
+          src="https://i.pinimg.com/1200x/ae/9a/a9/ae9aa9ac9a2f6cc5aab13940e71cac03.jpg"
+          alt=""
+        />
+
+        {/* Button */}
+        <span
+          onClick={() => setVal(!val)}
+          className="w-12 h-12 absolute bottom-[18%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center rounded-full bg-[#dadada7b] cursor-pointer"
+        >
+          <FaArrowRight size=".8em" />
+        </span>
+      </div>
+    </div>
+  );
 }
 
-export default Card */
-
+export default Card;
