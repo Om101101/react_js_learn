@@ -4,7 +4,9 @@ import "./index.css";
 function App() {
   return (
     <>
-      <Card />
+      {/* <Card text="Know More " color="bg-blue-600" />
+      <Card text="Download " color="bg-red-600" /> */}
+      <card/>
     </>
   );
 }
