@@ -305,5 +305,34 @@ function Card({text, color}) {
 
 export default Card; */
 
-// props drilling usage 
+// props drilling usage
 
+// Task 1 :- Humara data actually main aap component mein hoag aur hum use props ke througs pass karege card mein har card par ek add friennd button hoga and humein add freind button par click hone par alert dena hai
+
+import React from "react";
+
+function Card({ values, handleClick , index}) {
+  const{ name, image, profession, friends}= values;
+  return (
+    <div className="w-60 bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+      <div className="w-full h-56 overflow-hidden">
+        <img
+          className="w-full h-full object-cover object-top hover:scale-110 transition-transform duration-500"
+          src={image}
+          alt={name}
+        />
+      </div>
+
+      <div className="p-4">
+        <h3 className="text-lg font-bold text-gray-800">{name}</h3>
+        <p className="text-sm text-gray-500 mt-1">{profession}</p>
+
+        <button onClick={()=>handleClick(index)}  className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 rounded-lg transition-colors duration-300">
+          {friends=== true? " Friends": "Add Friends"  }
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default Card;
