@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Section_9 from "./Componets/Section_9";
 import Navbar1 from "./Componets/Navbar1";
 import "./index.css";
@@ -147,12 +147,15 @@ function App2() {
     },
   ];
 
+  const [songData, setSongData] = useState(data);
   return (
     <>
-      <div className="w-fulll h-screen bg-zinc-300 ">
+      <div className="w-full h-full bg-zinc-300 ">
         <Navbar1 />
         <div className="px-20 flex gap-10 mt-10 flex-wrap">
-          <Section_9 />
+          {songData.map((obj) => (
+            <Section_9 data={obj}  />
+          ))}
         </div>
       </div>
     </>
