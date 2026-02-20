@@ -148,8 +148,13 @@ function App2() {
   ];
 
   const [songData, setSongData] = useState(data);
-  const handleClick = () => {
-    alert(" I am Working ");
+  const handleClick = (index) => {
+    setSongData((prev)=>{
+        return prev.map((item, itemindex)=>{
+            if(itemindex===index) return{...item,added: !item.added}
+            return item
+        })
+    })
   };
 
   [];
@@ -159,8 +164,13 @@ function App2() {
       <div className="w-full h-full bg-zinc-300 ">
         <Navbar1 />
         <div className="px-20 flex gap-10 mt-10 flex-wrap">
-          {songData.map((obj) => (
-            <Section_9 data={obj} handleClick={handleClick} />
+          {songData.map((obj, index) => (
+            <Section_9
+              data={obj}
+              handleClick={handleClick}
+              index={index}
+              key={index}
+            />
           ))}
         </div>
       </div>

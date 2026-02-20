@@ -1,6 +1,6 @@
 import React from "react";
 
-function Section_9({ data, handelClick }) {
+function Section_9({ data, handleClick, index }) {
   const { image, artist, added, name } = data;
   return (
     <div className="w-60 bg-zinc-500 p-4 rounded-md flex gap-4 pb-10 relative mt-10">
@@ -12,7 +12,7 @@ function Section_9({ data, handelClick }) {
         <h6 className="text-sm ">{artist} </h6>
       </div>
       <button
-        onClick={handelClick}
+        onClick={()=>handleClick(index)}
         className={`px-4 py-3 whitespace-nowrap ${added === false ? " bg-orange-600 " : "bg-green-700"} absolute text-white text-sm rounded-full bottom-0  left-1/2 -translate-x-[50%]  translate-y-[50%]`}
       >
         {added === false ? "Add To Favourites" : "Added"}
