@@ -2,7 +2,7 @@ import React from 'react'
 
 function Section_9() {
   return (
-    <div className='w-60 bg-zinc-500 p-4 rounded-md flex gap-4 pb-10 relative'>
+    <div className='w-60 bg-zinc-500 p-4 rounded-md flex gap-4 pb-10 relative mt-10'>
         <div className='w-20 h-20 rounded-md bg-orange-500 '></div>
         <div>
             <h3 className='text-xl leading-none font-semibold'>Song Name </h3>
