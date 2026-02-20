@@ -7,7 +7,7 @@ function App2() {
   const data = [
     {
       image:
-        "https://i.pinimg.com/736x/7e/1c/82/7e1c823cdd06451a462d35415508379b.jpg",
+        "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTAJCnOdmGgcClmrOxX1rPZH-HkGMsDKBJVHfc8YvxQCKS4mGly",
       name: "Blinding Lights",
       artist: "The Weeknd",
       added: false,
@@ -148,13 +148,19 @@ function App2() {
   ];
 
   const [songData, setSongData] = useState(data);
+  const handleClick = () => {
+    alert(" I am Working ");
+  };
+
+  [];
+
   return (
     <>
       <div className="w-full h-full bg-zinc-300 ">
         <Navbar1 />
         <div className="px-20 flex gap-10 mt-10 flex-wrap">
           {songData.map((obj) => (
-            <Section_9 data={obj}  />
+            <Section_9 data={obj} handleClick={handleClick} />
           ))}
         </div>
       </div>
