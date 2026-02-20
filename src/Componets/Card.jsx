@@ -309,7 +309,7 @@ export default Card; */
 
 // Task 1 :- Humara data actually main aap component mein hoag aur hum use props ke througs pass karege card mein har card par ek add friennd button hoga and humein add freind button par click hone par alert dena hai
 
-import React from "react";
+/* import React from "react";
 
 function Card({ values, handleClick , index}) {
   const{ name, image, profession, friends}= values;
@@ -336,3 +336,4 @@ function Card({ values, handleClick , index}) {
 }
 
 export default Card;
+ */
