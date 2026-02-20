@@ -162,7 +162,7 @@ function App2() {
   return (
     <>
       <div className="w-full h-full bg-zinc-300 ">
-        <Navbar1 />
+        <Navbar1 data={songData}/>
         <div className="px-20 flex gap-10 mt-10 flex-wrap">
           {songData.map((obj, index) => (
             <Section_9
