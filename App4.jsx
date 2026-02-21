@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Form_Exercise from "./src/Componets/Form_Exercise";
 import Cards_Form from "./src/Componets/Cards_Form";
 function App4() {
+  const [users, setUsers] = useState([]);
   return (
-    <>
-      <div className="w-full h-screen bg-pink-400 flex items-center justify-center">
-        <div className="container mx-auto ">
-            <Cards_Form/>
-            <Form_Exercise/>
-        </div>
+    <div className="w-full h-screen bg-red-300  flex items-center justify-center">
+      <div className="w-full px-10 ">
+        <Cards_Form users={users} />
+        <Form_Exercise />
       </div>
-    </>
+    </div>
   );
 }
 
