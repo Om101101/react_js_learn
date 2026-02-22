@@ -14,6 +14,9 @@ function User_Routes() {
         provident nam! Ullam illum nesciunt doloribus natus iste? Libero, iste
         perspiciatis?
       </p>
+       <button className="mt-6 px-8 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-lg hover:bg-blue-700 hover:scale-105 transition duration-300">
+    Get Started
+  </button>
     </div>
   );
 }
