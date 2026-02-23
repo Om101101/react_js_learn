@@ -4,6 +4,7 @@ import { Link, NavLink, Route, Routes } from "react-router-dom";
 import React_JS_Routing from "./src/Componets/React_JS_Routing";
 import User_Routes from "./src/Componets/User_Routes";
 import About_Routes from "./src/Componets/About_Routes";
+import User_details from "./src/Componets/User_details";
 
 //Raect JS Routing_
 function App5() {
@@ -62,7 +63,8 @@ function App5() {
       </nav>
       <Routes>
         <Route path="/" element={<React_JS_Routing />} />
-        <Route path="/user" element={<User_Routes />} />
+        <Route path="/user" element={<User_Routes />} /> {/* ✅ Add this */}
+        <Route path="/user/:name" element={<User_details />} />
         <Route path="/about" element={<About_Routes />} />
       </Routes>
     </>
